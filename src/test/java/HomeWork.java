@@ -23,6 +23,8 @@ public class HomeWork {
         WebElement el= wd.findElement(By.tagName("button"));
         WebElement element = wd.findElement(By.cssSelector("button"));
 
+
+
         List<WebElement> list = wd.findElements(By.tagName("div"));
         List<WebElement> list1 = wd.findElements(By.cssSelector("div"));
 
@@ -73,10 +75,10 @@ public class HomeWork {
 
         // one of elements find by attribute ==> start & end & contains value
         // start
-        wd.findElement(By.cssSelector("[class ^='login']"));
+        wd.findElement(By.cssSelector("[class ^='login']"));//start
         // end
-        wd.findElement(By.cssSelector("[class $='login__']"));
+        wd.findElement(By.cssSelector("[class $='login']")); // end
         // contains
-        wd.findElement(By.cssSelector("[class  *='3EHKB']"));
+        wd.findElement(By.cssSelector("[class  *='3EHKB']"));//contains
     }
 }
