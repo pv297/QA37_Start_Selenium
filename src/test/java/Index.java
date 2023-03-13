@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -12,9 +14,22 @@ public class Index {
 
     @BeforeClass
     public void setUp(){
-        wd = new ChromeDriver();
-        wd.get("file:///C:/Users/pv297/Downloads/index.html");
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+        wd = new ChromeDriver(options);
+        wd.get("file:///C:/TelRan/QA%20%D1%80%D1%83%D1%87%D0%BD%D0%BE%D0%B5-auto/QA%20auto/24.index.html");
     }
+
+    @Test
+    public void tableTest(){
+        // Canada
+        WebElement canada =wd.findElement(By.cssSelector("tr:nth-child(3)>td:last-child"));
+
+        Assert.assertEquals(canada.getText(),"Canada");
+    }
+
 
     @Test
     public void csslocators(){
