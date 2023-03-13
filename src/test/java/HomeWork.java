@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class HomeWork {
@@ -28,7 +27,6 @@ public class HomeWork {
         WebElement el= wd.findElement(By.tagName("button"));
         WebElement element = wd.findElement(By.cssSelector("button"));
         WebElement xElement =wd.findElement(By.xpath("//button"));
-
 
         List<WebElement> list = wd.findElements(By.tagName("div"));
         List<WebElement> list1 = wd.findElements(By.cssSelector("div"));
@@ -59,30 +57,30 @@ public class HomeWork {
         WebElement xElement5 = wd.findElement(By.xpath("//a"));
 
         // by class
-
-        WebElement divContainer = wd.findElement(By.tagName("container"));
+        WebElement divContainer = wd.findElement(By.className("container"));
         WebElement divContainer1 = wd.findElement(By.cssSelector(".container"));
         WebElement xDivContainer1   = wd.findElement(By.xpath("//*[@class='container']"));
-        WebElement divNav = wd.findElement(By.tagName("navbar-component_nav__1X_4m"));
+        WebElement divNav = wd.findElement(By.className("navbar-component_nav__1X_4m"));
         WebElement divNav1 = wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
         WebElement xDivNav = wd.findElement(By.xpath("//*[@class='navbar-component_nav__1X_4m']"));
 
-        WebElement aClass= wd.findElement(By.tagName("active"));
+        WebElement aClass= wd.findElement(By.className("active"));
         WebElement aClass1 = wd.findElement(By.cssSelector(".active"));
-        WebElement el15 = wd.findElement(By.xpath("//*[@class='active']"));
+        WebElement xClass = wd.findElement(By.xpath("//*[@class='active']"));
 
-        WebElement divLog = wd.findElement(By.tagName("login_login__3EHKB"));
+        WebElement divLog = wd.findElement(By.className("login_login__3EHKB"));
         WebElement divLog1 = wd.findElement(By.cssSelector(".login_login__3EHKB"));
         WebElement xDivLog = wd.findElement(By.xpath("//*[@class='login_login__3EHKB']"));
 
         //By id
-        WebElement root = wd.findElement(By.tagName("root"));
+        WebElement root = wd.findElement(By.id("root"));
         WebElement root1 = wd.findElement(By.cssSelector("#root"));
         WebElement xRoot = wd.findElement(By.xpath("//*[@id='root']"));
+
         // by attribute
-        WebElement a1 = wd.findElement(By.cssSelector("[href='/home]"));
-        WebElement a2 = wd.findElement(By.cssSelector("[href='/about]"));
-        WebElement a3 = wd.findElement(By.cssSelector("[href='/login]"));
+        WebElement a1 = wd.findElement(By.cssSelector("[href='/home']"));
+        WebElement a2 = wd.findElement(By.cssSelector("[href='/about']"));
+        WebElement a3 = wd.findElement(By.cssSelector("[href='/login']"));
         WebElement inputE = wd.findElement(By.cssSelector("[placeholder='Email']"));
         WebElement inputP = wd.findElement(By.cssSelector("[placeholder='Password']"));
         WebElement buttonL = wd.findElement(By.name("login"));
@@ -97,12 +95,9 @@ public class HomeWork {
         WebElement element19 = wd.findElement(By.cssSelector("[placeholder='Email']"));
         WebElement el9 = wd.findElement(By.xpath("//input[@placeholder='Email']"));
 
-        // end WebElement el9 = wd.findElement(By.xpath("//input[@placeholder='Email']"));
-        wd.findElement(By.cssSelector("[class $='login']")); // end
         WebElement element20 = wd.findElement(By.cssSelector("[placeholder ^='Em']"));
         WebElement el10 = wd.findElement(By.xpath("//input[starts-with(@placeholder,'Em')]"));
-
-
+        
         WebElement element21 = wd.findElement(By.cssSelector("[placeholder $='il']"));
         // contains
         wd.findElement(By.cssSelector("[class  *='3EHKB']"));//contains
