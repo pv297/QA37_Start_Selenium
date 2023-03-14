@@ -97,7 +97,7 @@ public class HomeWork {
 
         WebElement element20 = wd.findElement(By.cssSelector("[placeholder ^='Em']"));
         WebElement el10 = wd.findElement(By.xpath("//input[starts-with(@placeholder,'Em')]"));
-        
+
         WebElement element21 = wd.findElement(By.cssSelector("[placeholder $='il']"));
         // contains
         wd.findElement(By.cssSelector("[class  *='3EHKB']"));//contains
